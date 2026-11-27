@@ -1,5 +1,5 @@
-const CACHE = 'fq-f2c855f828';
-const PRECACHE = ["./","assets/GowunBatang-Bold-CdtiTu-P.woff2","assets/GowunBatang-Regular-B2LT0b9t.woff2","assets/GowunDodum-Regular-Cxe_ZoEc.woff2","assets/index-B5g_wgsf.css","assets/index-ByeSLQGX.js","icon-180.png","icon-192.png","icon-512.png","index.html","manifest.webmanifest"];
+const CACHE = 'fq-8dd6b1ea87';
+const PRECACHE = ["./","assets/index-Dl_XsJmQ.js","assets/index-EbiEzT2w.css","icon-180.png","icon-192.png","icon-512.png","index.html","manifest.webmanifest"];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', (e) => {
